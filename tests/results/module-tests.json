@@ -1,0 +1,213 @@
+{
+  "executedAt": "2026-11-17T06:48:41.303Z",
+  "runtime": "v18.20.1",
+  "scope": "同一份平台无关ArkTS业务模块的Node宿主测试；不等同于模拟器实测",
+  "total": 22,
+  "passed": 22,
+  "failed": 0,
+  "results": [
+    {
+      "id": "M01",
+      "category": "正常",
+      "name": "空地移动",
+      "input": "前台(160,224)向右移动4",
+      "expected": "(164,224)，原进度未被改变",
+      "actual": {
+        "x": 164,
+        "y": 224
+      },
+      "status": "PASS"
+    },
+    {
+      "id": "M02",
+      "category": "边界",
+      "name": "障碍与墙壁阻挡",
+      "input": "前台(160,102)向上；(22,224)向左",
+      "expected": "不能进入书桌或越出边界",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "M03",
+      "category": "异常",
+      "name": "非法输入不移动",
+      "input": "NaN、负数、过大步长、非法方向",
+      "expected": "移动均被拒绝",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "M04",
+      "category": "正常",
+      "name": "门口切换与安全出生点",
+      "input": "前台(282,224)向右",
+      "expected": "进入书架区且出生点可行走",
+      "actual": "stacks",
+      "status": "PASS"
+    },
+    {
+      "id": "M05",
+      "category": "边界",
+      "name": "资料室锁定与解锁",
+      "input": "阅览区(280,40)向上跨入门口",
+      "expected": "未解锁不换房间；解锁后可进入",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "I01",
+      "category": "正常",
+      "name": "调查收集线索且不重复",
+      "input": "现在，前台(160,112)调查值班台两次",
+      "expected": "只获得一条order线索",
+      "actual": [
+        "order"
+      ],
+      "status": "PASS"
+    },
+    {
+      "id": "I02",
+      "category": "边界",
+      "name": "调查距离阈值",
+      "input": "距值班台底部30与31个逻辑像素",
+      "expected": "30可调查，31拒绝",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "I03",
+      "category": "异常",
+      "name": "无效物件与远距离调查",
+      "input": "出生点调查不存在物件或远处公告栏",
+      "expected": "不修改线索",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "I04",
+      "category": "正常",
+      "name": "回声决定线索可发现性",
+      "input": "前台(90,60)，现在与过去调查公告栏",
+      "expected": "现在无赠书卡；过去获得donation",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "P01",
+      "category": "正常",
+      "name": "密码正确解锁",
+      "input": "阅览区(280,48)，274",
+      "expected": "archiveUnlocked=true",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "P02",
+      "category": "边界",
+      "name": "不完整密码",
+      "input": "空串、27、2740",
+      "expected": "不解锁，提示三位数字",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "P03",
+      "category": "异常",
+      "name": "错误、字符与远程提交",
+      "input": "000、a74，或从前台提交274",
+      "expected": "不解锁",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "E01",
+      "category": "正常",
+      "name": "两个结局分别可达",
+      "input": "资料室信旁，分别作出两种满足条件的选择",
+      "expected": "delivered与promise分别被记录",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "E02",
+      "category": "异常",
+      "name": "缺少线索或远距离不能完成隐藏结局",
+      "input": "读过信但无赠书卡，或离开信件旁",
+      "expected": "拒绝推进结局",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "S01",
+      "category": "正常",
+      "name": "进度序列化往返",
+      "input": "包含线索、时代、房间和结局记录的进度",
+      "expected": "恢复字段一致",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "S02",
+      "category": "边界",
+      "name": "首次启动无存档",
+      "input": "空字符串",
+      "expected": "progress=null，无错误提示",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "S03",
+      "category": "异常",
+      "name": "损坏或错误版本存档",
+      "input": "坏JSON、null、数组、版本99、字段缺失、非法线索",
+      "expected": "拒绝恢复并给出提示",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "S04",
+      "category": "异常",
+      "name": "非法位置回退安全点",
+      "input": "坐标在墙外或书桌内",
+      "expected": "恢复可行走坐标且给出说明",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "S05",
+      "category": "异常",
+      "name": "Mock读取与flush失败",
+      "input": "存储替身抛出读取、写入错误",
+      "expected": "报告失败，不假报成功",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "S06",
+      "category": "边界",
+      "name": "顺序保存与快照隔离",
+      "input": "连续保存两次，中间修改角色位置",
+      "expected": "按调用顺序写入，最终为最后进度",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "S07",
+      "category": "正常",
+      "name": "重新开始保留结局收集",
+      "input": "已解锁两个结局后创建新进度",
+      "expected": "新游戏线索清空，结局收集保留且不共享数组",
+      "actual": "断言均通过",
+      "status": "PASS"
+    },
+    {
+      "id": "W01",
+      "category": "边界",
+      "name": "每个场景出生点和入口均安全",
+      "input": "全部场景与门的目标出生点",
+      "expected": "没有位于障碍中的入口",
+      "actual": "断言均通过",
+      "status": "PASS"
+    }
+  ]
+}

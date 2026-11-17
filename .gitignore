@@ -1,0 +1,26 @@
+# DevEco Studio 与构建缓存
+.idea/
+.hvigor/
+oh_modules/
+**/oh_modules/
+**/build/
+node_modules/
+.DS_Store
+local.properties
+
+# 本地凭据、签名与临时文件
+.env
+.env.*
+*.p12
+*.pfx
+*.keystore
+*.jks
+*.cer
+*.p7b
+*.pem
+*.key
+*.log.tmp
+work/
+
+# 本地个人报告；运行证据另行整理
+reports/private/

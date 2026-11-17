@@ -1,0 +1,8 @@
+{
+  "modelVersion": "5.0.5",
+  "name": "zero-hour-library",
+  "version": "1.0.0",
+  "description": "HarmonyOS 二维自由探索与回声解谜游戏",
+  "dependencies": {},
+  "devDependencies": {}
+}

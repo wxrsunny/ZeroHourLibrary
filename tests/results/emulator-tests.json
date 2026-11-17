@@ -1,0 +1,337 @@
+{
+  "device": "127.0.0.1:5555",
+  "system": "HarmonyOS 5.0.5 / API 17",
+  "method": "HDCԭ��UI���롢ʵ�ʲ��֡�Ӧ������Preferences�ļ�����ͼ����",
+  "results": [
+    {
+      "name": "�����������ƶ��ָ�",
+      "expected": "ǿ�ƹرղ�������ָ�ǰ̨(160,132)������̽���ɲ���",
+      "actual": {
+        "restoredPosition": {
+          "x": 160,
+          "y": 132
+        },
+        "verifiedEarlierInSameRun": true
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T06:59:36.815494+00:00"
+    },
+    {
+      "name": "��ײ������ֹͣ",
+      "expected": "���Ʊ������赲�����ֺ����ƶ�",
+      "actual": {
+        "observedTableBoundaryY": 102
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T06:59:36.827097+00:00"
+    },
+    {
+      "name": "���顢�������ֲ�",
+      "expected": "���ڻ��order����ȥ���donation���ֲ������",
+      "actual": {
+        "room": "foyer",
+        "position": {
+          "x": 68,
+          "y": 86
+        },
+        "facing": "up",
+        "era": "past",
+        "clues": [
+          "order",
+          "donation"
+        ],
+        "visitedRooms": [
+          "foyer"
+        ],
+        "archiveUnlocked": false,
+        "letterFound": false,
+        "ending": "",
+        "unlockedEndings": [],
+        "steps": 58
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T06:59:36.917585+00:00"
+    },
+    {
+      "name": "��������̽����ȫ������",
+      "expected": "ͨ���ſ��ƶ���������������ʱ���ϼƻ��5������",
+      "actual": {
+        "room": "reading",
+        "position": {
+          "x": 102,
+          "y": 120
+        },
+        "facing": "right",
+        "era": "now",
+        "clues": [
+          "order",
+          "donation",
+          "spines",
+          "record",
+          "promise"
+        ],
+        "visitedRooms": [
+          "foyer",
+          "stacks",
+          "reading"
+        ],
+        "archiveUnlocked": false,
+        "letterFound": false,
+        "ending": "",
+        "unlockedEndings": [],
+        "steps": 321
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T07:01:43.270924+00:00"
+    },
+    {
+      "name": "�������뷴��",
+      "expected": "�������벻��������ʾ��������ʾ",
+      "actual": {
+        "archiveUnlocked": false,
+        "feedback": [
+          "˳���ƺ����ԡ����ս������ں��鼹���֣�����һ�Ρ�"
+        ]
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T07:05:16.062720+00:00"
+    },
+    {
+      "name": "��ȷ�������",
+      "expected": "274���������������״̬",
+      "actual": {
+        "room": "reading",
+        "position": {
+          "x": 274,
+          "y": 48
+        },
+        "facing": "up",
+        "era": "now",
+        "clues": [
+          "order",
+          "donation",
+          "spines",
+          "record",
+          "promise"
+        ],
+        "visitedRooms": [
+          "foyer",
+          "stacks",
+          "reading"
+        ],
+        "archiveUnlocked": true,
+        "letterFound": false,
+        "ending": "",
+        "unlockedEndings": [],
+        "steps": 394
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T07:05:22.407318+00:00"
+    },
+    {
+      "name": "��ȫԼ�����",
+      "expected": "�ҵ���������������ѡ��ȫԼ��������promise���",
+      "actual": {
+        "room": "archive",
+        "position": {
+          "x": 164,
+          "y": 168
+        },
+        "facing": "up",
+        "era": "now",
+        "clues": [
+          "order",
+          "donation",
+          "spines",
+          "record",
+          "promise"
+        ],
+        "visitedRooms": [
+          "foyer",
+          "stacks",
+          "reading",
+          "archive"
+        ],
+        "archiveUnlocked": true,
+        "letterFound": true,
+        "ending": "promise",
+        "unlockedEndings": [
+          "promise"
+        ],
+        "steps": 440
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T07:05:47.894891+00:00"
+    },
+    {
+      "name": "���¿�ʼ�����ղ�",
+      "expected": "���¿�ʼ��յ�ǰ���ȣ�����promise�ղ�",
+      "actual": {
+        "room": "foyer",
+        "position": {
+          "x": 160,
+          "y": 224
+        },
+        "facing": "up",
+        "era": "now",
+        "clues": [],
+        "visitedRooms": [
+          "foyer"
+        ],
+        "archiveUnlocked": false,
+        "letterFound": false,
+        "ending": "",
+        "unlockedEndings": [
+          "promise"
+        ],
+        "steps": 0
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T07:05:52.705685+00:00"
+    },
+    {
+      "name": "����ֹͣ���̨�ָ�",
+      "expected": "���ֺ������ȶ����к�̨�ٷ��ز��Զ��߶�",
+      "actual": {
+        "room": "foyer",
+        "position": {
+          "x": 176,
+          "y": 224
+        },
+        "facing": "right",
+        "era": "now",
+        "clues": [],
+        "visitedRooms": [
+          "foyer"
+        ],
+        "archiveUnlocked": false,
+        "letterFound": false,
+        "ending": "",
+        "unlockedEndings": [
+          "promise"
+        ],
+        "steps": 4
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T07:05:56.017242+00:00"
+    },
+    {
+      "name": "�������������ָ�",
+      "expected": "ǿ��ֹͣ���̺󣬽�ɫ��ʱ�����������������ղ��ֶα���һ��",
+      "actual": {
+        "before": {
+          "room": "foyer",
+          "position": {
+            "x": 176,
+            "y": 224
+          },
+          "facing": "right",
+          "era": "now",
+          "clues": [],
+          "visitedRooms": [
+            "foyer"
+          ],
+          "archiveUnlocked": false,
+          "letterFound": false,
+          "ending": "",
+          "unlockedEndings": [
+            "promise"
+          ],
+          "steps": 4
+        },
+        "after": {
+          "room": "foyer",
+          "position": {
+            "x": 176,
+            "y": 224
+          },
+          "facing": "right",
+          "era": "now",
+          "clues": [],
+          "visitedRooms": [
+            "foyer"
+          ],
+          "archiveUnlocked": false,
+          "letterFound": false,
+          "ending": "",
+          "unlockedEndings": [
+            "promise"
+          ],
+          "steps": 4
+        }
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T07:05:58.704386+00:00"
+    },
+    {
+      "name": "ȱ�ٶ�������ʱ����ѡ�񲻿���",
+      "expected": "δ�������鿨������ʱ����ȫԼ����ť������",
+      "actual": {
+        "enabled": "false",
+        "clues": []
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T07:08:44.140716+00:00"
+    },
+    {
+      "name": "�ʹ��ż������˫����ղ�",
+      "expected": "ѡ���ŵ���delivered������ղ��ۼ�2��",
+      "actual": {
+        "room": "archive",
+        "position": {
+          "x": 164,
+          "y": 168
+        },
+        "facing": "up",
+        "era": "now",
+        "clues": [],
+        "visitedRooms": [
+          "foyer",
+          "stacks",
+          "reading",
+          "archive"
+        ],
+        "archiveUnlocked": true,
+        "letterFound": true,
+        "ending": "delivered",
+        "unlockedEndings": [
+          "promise",
+          "delivered"
+        ],
+        "steps": 239
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T07:08:45.870499+00:00"
+    },
+    {
+      "name": "���ű߽�ع�",
+      "expected": "��סy=22�߽翪����������˼������Ͻ���������",
+      "actual": {
+        "room": "archive",
+        "position": {
+          "x": 280,
+          "y": 224
+        },
+        "facing": "up",
+        "era": "now",
+        "clues": [],
+        "visitedRooms": [
+          "foyer",
+          "stacks",
+          "reading",
+          "archive"
+        ],
+        "archiveUnlocked": true,
+        "letterFound": false,
+        "ending": "",
+        "unlockedEndings": [
+          "promise",
+          "delivered"
+        ],
+        "steps": 201
+      },
+      "status": "PASS",
+      "executedAt": "2026-11-17T07:14:31.274882+00:00"
+    }
+  ]
+}

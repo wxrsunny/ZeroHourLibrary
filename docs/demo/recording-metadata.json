@@ -1,0 +1,7 @@
+{
+  "source": "鸿蒙模拟器snapshot_display连续实际画面，按真实时间重采样为5fps，无音频",
+  "durationSeconds": 240.2,
+  "capturedFrames": 584,
+  "outputFrames": 1201,
+  "exitCode": 0
+}
